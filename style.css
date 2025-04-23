@@ -1,0 +1,23 @@
+#countLabel1{
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+#container{
+    text-align: center;
+
+}
+.button{
+    padding: 10px;
+    font-size: 2em;
+    background-color: aqua;
+    border-radius: 4px;
+    color: #6b0bda;
+    
+cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(26, 138, 182);
+}
