@@ -4,6 +4,7 @@ body{
     text-align: center;
 }
 #mybutton{
+    font-family: aerial;
     font-size: 0.23em;
     padding: 5px 23px;
     border-radius: 1px;
