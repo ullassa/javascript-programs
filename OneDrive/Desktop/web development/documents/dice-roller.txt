@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>My Websute</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <h1>Dice roller</h1>
+            <label># of Dice:</label>
+            <input type="number" id="numofdice" value="1" min="1">
+            <button onclick="rolldice()">Roll Dice</button> 
+            <div id="diceresult"></div>
+            <div id="diceimages"></div>
+        </div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
+------------------------------------------
+body{
+    background-color: aqua;
+
+}
+#container{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+button{
+    padding: 10px 15px;
+    color: blue;
+    background-color: aquamarine;
+    font-size: 1.5remm;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+button:hover{
+    background-color: rgb(54, 160, 59);
+}
+button:active{
+    background-color: blueviolet;
+}
+
+
+function rolldice(){
+    const numofdice=document.getElementById("numofdice").value;
+    const diceresult=document.getElementById("diceresult");
+    const diceimages=document.getElementById("diceimages");
+   // const numofdice=document.getElementById(diceresult);
+
+
+   const values=[];
+   const images=[];
+
+   for(let i=0;i<numofdice;i++){
+    const value=Math.floor(Math.random()*6)+1;
+    // console.log(value);
+    values.push(value);
+    images.push(`<img src="dice-images/${value}.png" alt="dice ${value}" style="width:50px; height: 40px;">`);
+   }
+//    console.log(values);
+diceresult.textContent=`dice:${values.join(`, `)}`;
+diceimages.innerHTML=images.join(``);
+}
