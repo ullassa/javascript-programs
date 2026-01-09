@@ -1,0 +1,243 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Sorry Supriya 😔</title>
+<style>
+body {
+  background: #fff0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  font-size: 45px;
+  color: #ff4d6a;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  color: #444;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ff4d6a;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e63b57;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<div id="screen1">
+  <h1>Hey Supriya 😔</h1>
+  <p>Someone wants to tell you something important...</p>
+  <button onclick="next()">Continue</button>
+</div>
+
+<div id="screen2" class="hidden">
+  <h1>It's Ullas S A</h1>
+  <p>He is feeling sorry for what happened 🙏</p>
+  <button onclick="next2()">Continue</button>
+</div>
+
+<div id="screen3" class="hidden">
+  <h1>I'm Really Sorry 😔</h1>
+  <p>Please forgive me if possible...</p>
+  <button onclick="surprise()">Surprise 🎁</button>
+  <button onclick="next3()">Continue</button>
+</div>
+
+<div id="screen_surprise" class="hidden">
+  <h1>Surprise 😌</h1>
+  <p>Actually... it was your mistake 😂</p>
+  <button onclick="next3()">Okay Fine 😅</button>
+</div>
+
+<div id="screen4" class="hidden">
+  <h1>Forgive Me? ❤️</h1>
+  <button onclick="yes()">Yes</button>
+  <button onclick="no()">Not yet 😢</button>
+</div>
+
+<div id="screen5" class="hidden">
+  <h1>Thank You ❤️</h1>
+  <p>You made Ullas smile again 😊</p>
+</div>
+
+<div id="screen6" class="hidden">
+  <h1>I'll Try Again 😭</h1>
+  <p>Because I truly care...</p>
+</div>
+
+<script>
+function next(){
+  document.getElementById("screen1").classList.add("hidden");
+  document.getElementById("screen2").classList.remove("hidden");
+}
+function next2(){
+  document.getElementById("screen2").classList.add("hidden");
+  document.getElementById("screen3").classList.remove("hidden");
+}
+function surprise(){
+  document.getElementById("screen3").classList.add("hidden");
+  document.getElementById("screen_surprise").classList.remove("hidden");
+}
+function next3(){
+  document.getElementById("screen_surprise").classList.add("hidden");
+  document.getElementById("screen3").classList.add("hidden");
+  document.getElementById("screen4").classList.remove("hidden");
+}
+function yes(){
+  document.getElementById("screen4").classList.add("hidden");
+  document.getElementById("screen5").classList.remove("hidden");
+}
+function no(){
+  document.getElementById("screen4").classList.add("hidden");
+  document.getElementById("screen6").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sorry Supriya 🙇‍♂️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background:#fff0f5;
+  font-family: Arial, sans-serif;
+  display:flex;justify-content:center;align-items:center;
+  text-align:center;
+  height:100vh; margin:0; padding:20px;
+}
+.hidden{display:none;}
+
+h1 {color:#ff3b6b; font-size:32px;}
+p {font-size:18px; color:#333;}
+
+button {
+  padding:10px 20px;
+  margin-top:20px;
+  border:none; border-radius:8px;
+  background:#ff3b6b; color:white;
+  font-size:18px; cursor:pointer;
+}
+button:hover {background:#e22f57;}
+</style>
+</head>
+<body>
+
+<div id="s1">
+<h1>Hey Supriya 👋</h1>
+<p>Something dramatic is loading...</p>
+<button onclick="n1()">Next 👉</button>
+</div>
+
+<div id="s2" class="hidden">
+<h1>It’s me... Ullas S A 😔</h1>
+<p>Brace yourself for cringe level 9000</p>
+<button onclick="n2()">Continue 👉</button>
+</div>
+
+<div id="s3" class="hidden">
+<h1>My heart broke into 764 pieces 💔😭</h1>
+<p>Even Google couldn’t fix me...</p>
+<button onclick="sur()">Surprise 🎁</button>
+<button onclick="n3()">Skip 👉</button>
+</div>
+
+<div id="surprise" class="hidden">
+<h1>Plot Twist 🤯</h1>
+<p>Actually... it was <b>YOUR</b> mistake 😌💅</p>
+<button onclick="n4()">Next 👉</button>
+</div>
+
+<div id="s4" class="hidden">
+<h1>But okay... 😭</h1>
+<p>Even after suffering emotionally + mentally + spiritually<br> I still care 😔✨</p>
+<button onclick="n5()">Continue 👉</button>
+</div>
+
+<div id="s5" class="hidden">
+<h1>Forgive Me? ❤️</h1>
+<button id="yesBtn" onclick="yes()">Yes 😍</button>
+<button id="noBtn" onmouseover="escapeNo()">No 😭</button>
+</div>
+
+<div id="s6" class="hidden">
+<h1>THANK YOU ❤️🎉</h1>
+<p>You just increased my life by +48 years 😍</p>
+<p>My heart is doing bhangra 💃💃💃</p>
+</div>
+
+<div id="s7" class="hidden">
+<h1>Pain... Infinite Pain 😭</h1>
+<p>Fine... I'll just cry in HD</p>
+</div>
+
+<script>
+function n1(){show('s1','s2');}
+function n2(){show('s2','s3');}
+function n3(){show('s3','s4');}
+function sur(){show('s3','surprise');}
+function n4(){show('surprise','s4');}
+function n5(){show('s4','s5');}
+
+function yes(){
+  show('s5','s6');
+  confetti();
+}
+
+function escapeNo(){
+  var btn = document.getElementById('noBtn');
+  btn.style.position='absolute';
+  btn.style.left=(Math.random()*80)+'%';
+  btn.style.top=(Math.random()*80)+'%';
+}
+
+function show(hide,show){
+  document.getElementById(hide).classList.add('hidden');
+  document.getElementById(show).classList.remove('hidden');
+}
+
+function confetti(){
+  for(let i=0;i<30;i++){
+    let c = document.createElement('div');
+    c.style.position='fixed';
+    c.style.width='10px';
+    c.style.height='10px';
+    c.style.background=`hsl(${Math.random()*360},100%,50%)`;
+    c.style.top='0px';
+    c.style.left=Math.random()*100+'%';
+    c.style.transition='transform 1.5s linear';
+    document.body.appendChild(c);
+    setTimeout(()=>{c.style.transform=`translateY(100vh)`;},10);
+    setTimeout(()=>{c.remove();},2000);
+  }
+}
+</script>
+
+</body>
+</html>
